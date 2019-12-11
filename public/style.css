@@ -1,0 +1,21 @@
+body {
+  background-color: yellow;
+}
+
+p {
+  font-size: 22px;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 18px;
+}
+
+li{
+  padding-bottom: 10px;
+}
+
+.center {
+  width: 250px;
+  margin: auto;
+}

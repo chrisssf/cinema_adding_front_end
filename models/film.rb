@@ -120,6 +120,13 @@ class Film
     return Screening.map_screenings(screening_data)
   end
 
+  def self.find_by_id(id)
+    sql = "SELECT * FROM films where id = $1"
+    values = [id]
+    film = SqlRunner.run(sql, values).first
+    return film
+  end
+
   def most_popular_screening
     sql = "SELECT tickets.*, screenings.* FROM tickets
           INNER JOIN screenings ON screenings.id = tickets.screening_id
